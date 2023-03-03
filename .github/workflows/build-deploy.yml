@@ -46,6 +46,10 @@ jobs:
     runs-on: ubuntu-22.04
     needs: build
     
+    # Add a id-token permission
+    permissions:
+      id-token:write
+      
     steps:
       - name: Set repository name to env
         run: | 
@@ -54,4 +58,13 @@ jobs:
       - name: Confirm if env have REPOSITORY_NAME
         run: |
           echo ${{ env.REPOSITORY_NAME }}
+          
+      # Add a step
+      - name: Azure Login using OIDC
+        uses: azure/login@v1
+        with:
+          client-id: ${{ secerets.Azure_CLIENT_ID }}
+          tenant0id: ${{ secerets.Azure_TENANT_ID }}
+          subscription: ${{ secerets.Azure_SUBSCRIPTION_ID }}
+          
 
