@@ -48,7 +48,7 @@ jobs:
     
     # Add a id-token permission
     permissions:
-      id-token:write
+      id-token: write
       
     steps:
       - name: Set repository name to env
@@ -63,8 +63,8 @@ jobs:
       - name: Azure Login using OIDC
         uses: azure/login@v1
         with:
-          client-id: ${{ secerets.Azure_CLIENT_ID }}
-          tenant0id: ${{ secerets.Azure_TENANT_ID }}
-          subscription: ${{ secerets.Azure_SUBSCRIPTION_ID }}
+          client-id: ${{ secrets.Azure_CLIENT_ID }}
+          tenant0id: ${{ secrets.Azure_TENANT_ID }}
+          subscription: ${{ secrets.Azure_SUBSCRIPTION_ID }}
           
 
