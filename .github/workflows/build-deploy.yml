@@ -4,7 +4,7 @@ on:
   workflow_dispatch:      
 #Add env
 env:
-  CONTSINER_REGISTRY: handson01repo062.azurecr.io
+  CONTAINER_REGISTRY: handson01repo062.azurecr.io
 jobs:
   build:
     runs-on: ubuntu-22.04
