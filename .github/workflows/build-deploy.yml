@@ -64,7 +64,7 @@ jobs:
         uses: azure/login@v1
         with:
           client-id: ${{ secrets.Azure_CLIENT_ID }}
-          tenant0id: ${{ secrets.Azure_TENANT_ID }}
+          tenant-id: ${{ secrets.Azure_TENANT_ID }}
           subscription: ${{ secrets.Azure_SUBSCRIPTION_ID }}
           
 
