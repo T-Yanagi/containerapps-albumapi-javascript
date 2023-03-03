@@ -26,6 +26,6 @@ jobs:
       - name: Log in to container registry
         uses: docker/login-action@v1
         with:
-          registry: ${{ env.CONTSINER_REGIDTRY }}
-          username: ${{ secrets.CONTSINER_REGIDTRY_USERNAME }}
-          oassword: ${{ secrets.CONTSINER_REGIDTRY_PASSEORD }}
+          registry: ${{ env.CONTAINER_REGISTRY }}
+          username: ${{ secrets.CONTAINER_REGISTRY_USERNAME }}
+          oassword: ${{ secrets.CONTAINER_REGISTRY_PASSWORD }}
